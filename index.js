@@ -7,6 +7,7 @@ const { rdf } = require('@tpluscode/rdf-ns-builders')
 
 const ns = {
     doap: namespace('http://usefulinc.com/ns/doap#'),
+    rdb2rdftest: namespace('http://purl.org/NET/rdb2rdf-test#')
 }
 
 async function main() {
@@ -14,9 +15,11 @@ async function main() {
 
     clownface({ dataset }).has(rdf.type, ns.doap.Project).forEach(project => {
         const suffix = project.out(ns.doap.name).value
+        const engine = project.out(ns.rdb2rdftest.dbms).value
 
         spawn('./run.sh', [
-            '-s', suffix
+            '-s', suffix,
+            '--engine', engine
         ], { stdio: 'inherit' })
     })
 }
