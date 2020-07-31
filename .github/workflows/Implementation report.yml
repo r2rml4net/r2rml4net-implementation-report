@@ -28,7 +28,7 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: results
-          path: test-cases/**/*-r2rml4net.ttl
+          path: test-cases/**/*-*.ttl
       - uses: actions/upload-artifact@v2
         with:
           name: reports
