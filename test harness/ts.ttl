@@ -13,7 +13,7 @@
 	
 <myProject>
         a doap:Project ;
-        doap:name "r2rml4net" ;
+        doap:name "r2rml4net 0.7" ;
         doap:homepage <http://r2rml.net>  ;
         doap:programming-language "C#"  ;
         doap:developer <http://t-code.pl/me#this> ;        

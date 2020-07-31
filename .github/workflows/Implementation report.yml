@@ -25,7 +25,7 @@ jobs:
         with:
           java-version: 13
       - run: docker-compose up -d
-      - run: dotnet tool install -g r2rml4net-cli
+      - run: dotnet tool install -g r2rml4net-cli --version 0.7
       - run: yarn
       - run: ./index.js
       - uses: actions/upload-artifact@v2
