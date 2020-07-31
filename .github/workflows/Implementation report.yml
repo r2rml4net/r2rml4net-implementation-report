@@ -13,8 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-        with:
-          submodules: recursive
+      - run: git clone https://github.com/r2rml4net/test-cases.git --depth 1
       - uses: actions/setup-dotnet@v1
         with:
           dotnet-version: '2.2'
