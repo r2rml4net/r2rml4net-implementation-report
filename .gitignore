@@ -1,3 +1,5 @@
 test harness/earl*.ttl
 *.log
 reports/
+test-cases/
+node_modules/

@@ -14,6 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: git clone https://github.com/r2rml4net/test-cases.git --depth 1
+      - uses: actions/setup-node@v1
       - uses: actions/setup-dotnet@v1
         with:
           dotnet-version: '2.2'
@@ -21,9 +22,10 @@ jobs:
         uses: actions/setup-java@v1.4.0
         with:
           java-version: 13
-      - run: docker-compose up -d mssql
+      - run: docker-compose up -d
       - run: dotnet tool install -g r2rml4net-cli
-      - run: ./run.sh
+      - run: yarn
+      - run: ./index.js
       - uses: actions/upload-artifact@v2
         with:
           name: results
