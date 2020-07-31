@@ -12,7 +12,7 @@ while [[ "$#" -gt 0 ]]; do
     shift
 done
 
-ConnectionString="Server=tcp:localhost,1433;User ID=sa;Password=$PASSWORD;Initial Catalog=$database"
+ConnectionString="Server=tcp:localhost,1433;User ID=sa;Password=Passw0rd1;Initial Catalog=$database"
 
 r2rml4net direct \
     -c "$ConnectionString" \
